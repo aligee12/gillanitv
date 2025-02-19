@@ -1,5 +1,16 @@
 import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import Head from "next/head";
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <title>Gillani TV</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
+
+export default MyApp;
